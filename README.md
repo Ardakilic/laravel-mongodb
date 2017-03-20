@@ -1,5 +1,28 @@
-Laravel MongoDB
+Laravel MongoDB 2.0 For PHP7
 ===============
+
+This repository aims to add PHP7 support to Laravel 4.2 + Jensseners MongoDB adapter.
+
+Simply update your `composer.json` file like this:
+
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Ardakilic/laravel-mongodb"
+        }
+    ],
+    "require": {
+        "jenssegers/mongodb": "dev-2.0-php7"
+    }
+}
+```
+
+###Original readme is below
+
+---
 
 [![Latest Stable Version](http://img.shields.io/github/release/jenssegers/laravel-mongodb.svg)](https://packagist.org/packages/jenssegers/mongodb) [![Total Downloads](http://img.shields.io/packagist/dm/jenssegers/mongodb.svg)](https://packagist.org/packages/jenssegers/mongodb) [![Build Status](http://img.shields.io/travis/jenssegers/laravel-mongodb.svg)](https://travis-ci.org/jenssegers/laravel-mongodb) [![Coverage Status](http://img.shields.io/coveralls/jenssegers/laravel-mongodb.svg)](https://coveralls.io/r/jenssegers/laravel-mongodb?branch=master)
 
