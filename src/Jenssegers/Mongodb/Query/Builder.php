@@ -415,7 +415,20 @@ class Builder extends QueryBuilder {
             }
 
             // Return id
+            
+            // PHP7 workaround
+            // If you don't need the returning of the _id column directly (you should I believe)
+            //      or you are not using the _id field at all,
+            //      this workaround fixes the "Undefined Index: _id" exception thrown
+            // This is a dirty fix only for the cases where you don't need the _id on your apllication at all
+            // 
+            // return $values[$sequence];
+            if (PHP_VERSION_ID >= 70000)
+            {
+                return isset($values[$sequence]) ? $values[$sequence] : null;
+            }
             return $values[$sequence];
+            
         }
     }
 
